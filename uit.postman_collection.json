@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "8e618991-957a-41e7-950c-1e3fa03a9d89",
+		"name": "uit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1193698"
+	},
+	"item": [
+		{
+			"name": "user.token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "inginer",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "110022",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile.update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "F_xAnbbFGcs5oLsZmlczPdPcq80nrkjG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fio",
+							"value": "Ruslan Madatov",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rrss@dasda.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+79254552773",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user.list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"index"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
